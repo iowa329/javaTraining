@@ -17,85 +17,164 @@ public class Baekjoon_10809 {
 		}
 		
 		//입력 단어 순서별 알파벳 위치 인덱싱
+		int alphaPos;
 		for(int i=0; i<wd.length(); i++) {
 			switch(wd.charAt(i)) {
 			case 'a' :
-				alphabet[0] = i;
+				alphaPos=0;
+				if(alphabet[alphaPos] != -1)
+					break;
+				alphabet[alphaPos] = i;
 				break;
 			case 'b' :
-				alphabet[1] = i;
+				alphaPos=1;
+				if(alphabet[alphaPos] != -1)
+					break;
+				alphabet[alphaPos] = i;
 				break;
 			case 'c' :
-				alphabet[2] = i;
+				alphaPos=2;
+				if(alphabet[alphaPos] != -1)
+					break;
+				alphabet[alphaPos] = i;
 				break;
 			case 'd' :
-				alphabet[3] = i;
+				alphaPos=3;
+				if(alphabet[alphaPos] != -1)
+					break;
+				alphabet[alphaPos] = i;
 				break;
 			case 'e' :
-				alphabet[4] = i;
+				alphaPos=4;
+				if(alphabet[alphaPos] != -1)
+					break;
+				alphabet[alphaPos] = i;
 				break;
 			case 'f' :
-				alphabet[5] = i;
+				alphaPos=5;
+				if(alphabet[alphaPos] != -1)
+					break;
+				alphabet[alphaPos] = i;
 				break;
 			case 'g' :
-				alphabet[6] = i;
+				alphaPos=6;
+				if(alphabet[alphaPos] != -1)
+					break;
+				alphabet[alphaPos] = i;
 				break;
 			case 'h' :
-				alphabet[7] = i;
+				alphaPos=7;
+				if(alphabet[alphaPos] != -1)
+					break;
+				alphabet[alphaPos] = i;
 				break;
 			case 'i' :
-				alphabet[8] = i;
+				alphaPos=8;
+				if(alphabet[alphaPos] != -1)
+					break;
+				alphabet[alphaPos] = i;
 				break;
 			case 'j' :
-				alphabet[9] = i;
+				alphaPos=9;
+				if(alphabet[alphaPos] != -1)
+					break;
+				alphabet[alphaPos] = i;
 				break;
 			case 'k' :
-				alphabet[10] = i;
+				alphaPos=10;
+				if(alphabet[alphaPos] != -1)
+					break;
+				alphabet[alphaPos] = i;
 				break;
 			case 'l' :
-				alphabet[11] = i;
+				alphaPos=11;
+				if(alphabet[alphaPos] != -1)
+					break;
+				alphabet[alphaPos] = i;
 				break;
 			case 'm' :
-				alphabet[12] = i;
+				alphaPos=12;
+				if(alphabet[alphaPos] != -1)
+					break;
+				alphabet[alphaPos] = i;
 				break;
 			case 'n' :
-				alphabet[13] = i;
+				alphaPos=13;
+				if(alphabet[alphaPos] != -1)
+					break;
+				alphabet[alphaPos] = i;
 				break;
 			case 'o' :
-				alphabet[14] = i;
+				alphaPos=14;
+				if(alphabet[alphaPos] != -1)
+					break;
+				alphabet[alphaPos] = i;
 				break;
 			case 'p' :
-				alphabet[15] = i;
+				alphaPos=15;
+				if(alphabet[alphaPos] != -1)
+					break;
+				alphabet[alphaPos] = i;
 				break;
 			case 'q' :
-				alphabet[16] = i;
+				alphaPos=16;
+				if(alphabet[alphaPos] != -1)
+					break;
+				alphabet[alphaPos] = i;
 				break;
 			case 'r' :
-				alphabet[17] = i;
+				alphaPos=17;
+				if(alphabet[alphaPos] != -1)
+					break;
+				alphabet[alphaPos] = i;
 				break;
 			case 's' :
-				alphabet[18] = i;
+				alphaPos=18;
+				if(alphabet[alphaPos] != -1)
+					break;
+				alphabet[alphaPos] = i;
 				break;
 			case 't' :
-				alphabet[19] = i;
+				alphaPos=19;
+				if(alphabet[alphaPos] != -1)
+					break;
+				alphabet[alphaPos] = i;
 				break;
 			case 'u' :
-				alphabet[20] = i;
+				alphaPos=20;
+				if(alphabet[alphaPos] != -1)
+					break;
+				alphabet[alphaPos] = i;
 				break;
 			case 'v' :
-				alphabet[21] = i;
+				alphaPos=21;
+				if(alphabet[alphaPos] != -1)
+					break;
+				alphabet[alphaPos] = i;
 				break;
 			case 'w' :
-				alphabet[22] = i;
+				alphaPos=22;
+				if(alphabet[alphaPos] != -1)
+					break;
+				alphabet[alphaPos] = i;
 				break;
 			case 'x' :
-				alphabet[23] = i;
+				alphaPos=23;
+				if(alphabet[alphaPos] != -1)
+					break;
+				alphabet[alphaPos] = i;
 				break;
 			case 'y' :
-				alphabet[24] = i;
+				alphaPos=24;
+				if(alphabet[alphaPos] != -1)
+					break;
+				alphabet[alphaPos] = i;
 				break;
 			case 'z' :
-				alphabet[25] = i;
+				alphaPos=25;
+				if(alphabet[alphaPos] != -1)
+					break;
+				alphabet[alphaPos] = i;
 				break;
 			}
 		}
