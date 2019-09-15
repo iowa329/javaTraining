@@ -11,93 +11,93 @@ public class Baekjoon_10809 {
 		int alphabet[] = new int[26];
 		
 		//알파벳 위치 배열 초기화
-		for(int i=0; i<wd.length(); i++) {
+		for(int i=0; i<alphabet.length; i++) {
 			alphabet[i] = -1;
+			//System.out.print(alphabet[i]);
 		}
 		
 		//입력 단어 순서별 알파벳 위치 인덱싱
 		for(int i=0; i<wd.length(); i++) {
 			switch(wd.charAt(i)) {
 			case 'a' :
-				alphabet[i] = i;
+				alphabet[0] = i;
 				break;
 			case 'b' :
-				alphabet[i] = i;
+				alphabet[1] = i;
 				break;
 			case 'c' :
-				alphabet[i] = i;
+				alphabet[2] = i;
 				break;
 			case 'd' :
-				alphabet[i] = i;
+				alphabet[3] = i;
 				break;
 			case 'e' :
-				alphabet[i] = i;
+				alphabet[4] = i;
 				break;
 			case 'f' :
-				alphabet[i] = i;
+				alphabet[5] = i;
 				break;
 			case 'g' :
-				alphabet[i] = i;
+				alphabet[6] = i;
 				break;
 			case 'h' :
-				alphabet[i] = i;
+				alphabet[7] = i;
 				break;
 			case 'i' :
-				alphabet[i] = i;
+				alphabet[8] = i;
 				break;
 			case 'j' :
-				alphabet[i] = i;
+				alphabet[9] = i;
 				break;
 			case 'k' :
-				alphabet[i] = i;
+				alphabet[10] = i;
 				break;
 			case 'l' :
-				alphabet[i] = i;
+				alphabet[11] = i;
 				break;
 			case 'm' :
-				alphabet[i] = i;
+				alphabet[12] = i;
 				break;
 			case 'n' :
-				alphabet[i] = i;
+				alphabet[13] = i;
 				break;
 			case 'o' :
-				alphabet[i] = i;
+				alphabet[14] = i;
 				break;
 			case 'p' :
-				alphabet[i] = i;
+				alphabet[15] = i;
 				break;
 			case 'q' :
-				alphabet[i] = i;
+				alphabet[16] = i;
 				break;
 			case 'r' :
-				alphabet[i] = i;
+				alphabet[17] = i;
 				break;
 			case 's' :
-				alphabet[i] = i;
+				alphabet[18] = i;
 				break;
 			case 't' :
-				alphabet[i] = i;
+				alphabet[19] = i;
 				break;
 			case 'u' :
-				alphabet[i] = i;
+				alphabet[20] = i;
 				break;
 			case 'v' :
-				alphabet[i] = i;
+				alphabet[21] = i;
 				break;
 			case 'w' :
-				alphabet[i] = i;
+				alphabet[22] = i;
 				break;
 			case 'x' :
-				alphabet[i] = i;
+				alphabet[23] = i;
 				break;
 			case 'y' :
-				alphabet[i] = i;
+				alphabet[24] = i;
 				break;
 			case 'z' :
-				alphabet[i] = i;
+				alphabet[25] = i;
 				break;
 			}
-			System.out.println(alphabet[i]);
 		}
 		
 		//인덱싱 값 출력
