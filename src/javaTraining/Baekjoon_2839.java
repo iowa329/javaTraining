@@ -1,6 +1,7 @@
 package javaTraining;
 import java.util.Scanner;
 
+//백준 문제 2839번 풀이_김희재
 public class Baekjoon_2839 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
