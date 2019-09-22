@@ -8,9 +8,7 @@ public class Baekjoon_2839 {
 		
 		int five = num/5;
 		int three = -1;
-		int rest = 0;
-		
-		rest = num%5;
+		int rest = num%5;
 		
 		while(five>=0) {
 			if(rest%3 == 0) {
@@ -18,7 +16,7 @@ public class Baekjoon_2839 {
 			} else {
 				five--;
 				if(five>0)
-					rest = num/five;
+					rest = num - (5*five);
 			}
 		}
 		
