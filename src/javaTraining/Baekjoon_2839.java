@@ -18,7 +18,7 @@ public class Baekjoon_2839 {
 				five = -1;
 			} else {
 				five--;
-				if(five>0)
+				if(five>=0)
 					rest = num - (5*five);
 			}
 		}
