@@ -13,9 +13,7 @@ public class Baekjoon_2775 {
 			return people;
 		}
 		
-		
-		
-		return people + countPeople(a-1, b);
+		return people = people + countPeople(a-1, b);
 		
 	}
 	
@@ -30,7 +28,7 @@ public class Baekjoon_2775 {
 		n = sc.nextInt();
 		
 		int result = countPeople(k-1,n);
-		
+		System.out.println(result);
 			
 		}
 	}
