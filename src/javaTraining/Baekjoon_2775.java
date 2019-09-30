@@ -13,7 +13,9 @@ public class Baekjoon_2775 {
 			return people;
 		}
 		
-		return people = people + countPeople(a-1, b);
+		for(int j=1; j<=b; j++)
+			people = people + countPeople(a-1, j);
+		return people;
 		
 	}
 	
