@@ -4,13 +4,18 @@ import java.util.Scanner;
 //백준 문제 2775번 풀이_김희재
 public class Baekjoon_2775 {
 	
-	static int countPeople(int k, int n){
+	static int countPeople(int a, int b){
 		int people = 0;
-		if(k==0) {
-			for(int i=1; i<=n; i++) {
-				people += n;
-			}
+		
+		if(a==0) {
+			for(int i=1; i<=b; i++)
+				people += i;
+			return people;
 		}
+		
+		
+		
+		return people + countPeople(a-1, b);
 		
 	}
 	
@@ -24,7 +29,7 @@ public class Baekjoon_2775 {
 		k = sc.nextInt();
 		n = sc.nextInt();
 		
-		int result = countPeople(k,n);
+		int result = countPeople(k-1,n);
 		
 			
 		}
