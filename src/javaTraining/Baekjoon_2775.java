@@ -24,13 +24,18 @@ public class Baekjoon_2775 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		int test, k, n;
-		test = sc.nextInt();
-		k = sc.nextInt();
-		n = sc.nextInt();
+		int T = sc.nextInt();
 		
-		int result = countPeople(k-1,n);
-		System.out.println(result);
+		while(T>0) {
+			int k, n;
+			k = sc.nextInt();
+			n = sc.nextInt();
 			
+			int result = countPeople(k-1,n);
+			System.out.println(result);
+			
+			T--;
+		}
+		
 		}
 	}
