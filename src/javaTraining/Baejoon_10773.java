@@ -13,18 +13,20 @@ public class Baejoon_10773 {
 			num[i]=0;
 		
 		//입력값을 배열에 저장
-		
+		int pos = 0; //저장되고 있는 배열의 위치 인덱스값
 		for(int i=0; i<count; i++) {
-			num[i] = sc.nextInt();
-			if(num[i] == 0) {
-				num[i-1] = 0;
-				i--;
+			num[pos] = sc.nextInt();
+			if(num[pos] == 0) {
+				pos--;
+				num[pos] = 0;
+			} else {
+				pos++;
 			}
 		}
 		
 		//입력된 배열의 총합 구하기
 		int sum = 0;
-		for(int i=0; i<num.length; i++)
+		for(int i=0; i<=pos; i++)
 			sum += num[i];
 		
 		System.out.println(sum);
