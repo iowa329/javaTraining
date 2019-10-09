@@ -1,6 +1,8 @@
 package javaTraining;
 import java.util.Scanner;
 
+//파일이름 변경 되어서 이전 commit 기록 잘 안보임. account에 commit 기록 참조필요
+//Baejoon_10773 -> Baekjoon_10773
 // 백준 문제 10773번 풀이_김희재
 class Node {
 	int num;
