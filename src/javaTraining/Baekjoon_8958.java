@@ -9,12 +9,14 @@ public class Baekjoon_8958 {
 		
 		for(int i=1; i<=line; i++) {
 			String quiz = sc.nextLine();
-			int sum = 0;
+			int sum = 0, value = 0;
 			for(int j=0; j<quiz.length(); j++){
-				int value = 0;
-				if(quiz.charAt(i) == 'O') {
+				
+				if(quiz.charAt(j) == 'O') {
 					value++;
 					sum += value;
+				} else {
+					value = 0;
 				}
 			}
 			System.out.println(sum);
