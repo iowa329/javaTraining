@@ -1,6 +1,7 @@
 package javaTraining;
 import java.util.Scanner;
 
+//백준 문제 1065번 풀이_김희재
 public class Baekjoon_1065 {
 	
 	public static void main(String[] args) {
