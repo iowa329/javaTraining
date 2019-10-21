@@ -13,13 +13,13 @@ public class Baekjoon_1065 {
 		int one, ten, hun;
 		for(int i=1;i<=num;i++) {
 			one = i%10;
-			ten = i%100 - one;
-			hun = i - ten - one;
-			if(num<10) {
+			ten = (i%100)/10;
+			hun = i/100;
+			if(i<10) {
 				count++;
-			} else if(num>=10 && num<100) {
+			} else if(i>=10 && i<100) {
 				count++;
-			} else if(num>=100 && num<1000) {
+			} else if(i>=100 && i<1000) {
 				diff1 = one - ten;
 				diff2 = ten - hun;
 				if(diff1 == diff2)
