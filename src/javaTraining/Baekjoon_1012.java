@@ -1,6 +1,7 @@
 package javaTraining;
 import java.util.Scanner;
 
+//백준 문제 1012번 풀이_김희재
 public class Baekjoon_1012 {
 	
 	public static void main(String[] args) {
@@ -10,7 +11,7 @@ public class Baekjoon_1012 {
 			int width = sc.nextInt();
 			int height = sc.nextInt();
 			int cabbage = sc.nextInt();
-			int[][] field = new int[width+1][height+1];
+			int[][] field = new int[width+2][height+2];
 			
 			for(int i=1; i<=cabbage; i++) {
 				int x = sc.nextInt();
