@@ -7,6 +7,8 @@ public class Baekjoon_1316 {
 		Scanner sc = new Scanner(System.in);
 		int cnt = sc.nextInt();
 		
+		int grpwd = cnt;
+		
 		for(int i=0;i<cnt; i++) {
 			String wd = sc.nextLine();
 			int length = wd.length();
@@ -14,14 +16,23 @@ public class Baekjoon_1316 {
 			
 			check[0] = wd.charAt(0);
 			for(int j=1; j<length; j++) {
-				
-				if(check[j] == check[j-1])
+				if(check[j] == check[j-1]) {
 					check[j] = wd.charAt(j);
-				else
-					j = length;
+				} else {
+					for(int k=0; k<j; k++) {
+						if(check[j] == check[k]) {
+							k = j;
+							j = length;
+							grpwd--;
+						} else {
+							check[j] = wd.charAt(j);
+						}
+					}
+				}
 			}
 		}
 		sc.close();
+		System.out.println(grpwd);
 	}
 	
 }
