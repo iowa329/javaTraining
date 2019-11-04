@@ -17,15 +17,16 @@ public class Baekjoon_1316 {
 			
 			check[0] = wd.charAt(0);
 			for(int j=1; j<length; j++) {
+				check[j] = wd.charAt(j);
 				if(check[j] != check[j-1]) {
-					for(int k=0; k<j; k++) {
+					int pos = j;
+					for(int k=0; k<pos; k++) {
 						if(check[j] == check[k]) {
 							k = j;
 							j = length;
 							grpwd--;
 						}
 					}
-					check[j] = wd.charAt(j);
 				}
 			}
 		}
