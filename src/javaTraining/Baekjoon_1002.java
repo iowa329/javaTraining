@@ -5,7 +5,6 @@ public class Baekjoon_1002 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int cnt = sc.nextInt();
-		//sc.next();
 		
 		for(int i=1; i<=cnt; i++) {
 			int x1 = sc.nextInt();
@@ -16,7 +15,7 @@ public class Baekjoon_1002 {
 			int r2 = sc.nextInt();
 			
 			int cases = 0;
-			int distance = (int) Math.pow((x1-x2)+(y1-y2), 2);
+			int distance = (int) Math.pow((x1-x2),2) + (int) Math.pow((y1-y2),2);
 			int radiusSum = (int) Math.pow((r1+r2), 2);
 			int radiusDiff = (int) Math.pow((r1-r2), 2);
 			
@@ -28,18 +27,15 @@ public class Baekjoon_1002 {
 			} else {
 				if(distance == radiusSum || distance == radiusDiff){
 					cases = 1;
-				} else if(distance < radiusSum)
+				} else if(distance > radiusDiff && distance < radiusSum)
 					cases = 2;
 				else {
 					cases = 0;
 				}
 				
 			}
-			
 			System.out.println(cases);
 		}
 		sc.close();
-		
-		
 	}
 }
