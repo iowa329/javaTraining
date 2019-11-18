@@ -9,54 +9,53 @@ public class Baekjoon_2941 {
 		sc.close();
 		
 		int croatia=0;
-		int pos=2;
-		for(int i=0; i<wd.length(); i++) {
-			String tmp = wd.substring(i,i+pos);
+		int end; boolean loop;
+		for(int start=0; start<wd.length(); start=start+(end+1)) {
+			String tmp = wd.substring(start,start+2);
 			
-			boolean loop=true;
+			end = 3; loop=true;
 			while(loop) {
-				for(pos=2; pos<0; pos--) {
-					tmp = tmp.substring(0,pos);
-					switch(tmp) {
-					case "c=":
-						croatia += 1;
-						loop = false;
-						break;
-					case "c-":
-						croatia += 1;
-						loop = false;
-						break;
-					case "dz=":
-						croatia += 1;
-						loop = false;
-						break;
-					case "d-":
-						croatia += 1;
-						loop = false;
-						break;
-					case "lj":
-						croatia += 1;
-						loop = false;
-						break;
-					case "nj":
-						croatia += 1;
-						loop = false;
-						break;
-					case "s=":
-						croatia += 1;
-						loop = false;
-						break;
-					case "z=":
-						croatia += 1;
-						loop = false;
-						break;
-					}
+				--end;
+				tmp = tmp.substring(0,end);
+				switch(tmp) {
+				case "c=":
+					croatia += 1;
+					loop = false;
+					break;
+				case "c-":
+					croatia += 1;
+					loop = false;
+					break;
+				case "dz=":
+					croatia += 1;
+					loop = false;
+					break;
+				case "d-":
+					croatia += 1;
+					loop = false;
+					break;
+				case "lj":
+					croatia += 1;
+					loop = false;
+					break;
+				case "nj":
+					croatia += 1;
+					loop = false;
+					break;
+				case "s=":
+					croatia += 1;
+					loop = false;
+					break;
+				case "z=":
+					croatia += 1;
+					loop = false;
+					break;
 				}
-				loop = false;
-			}
+				if(end <= 0)
+					croatia += 1; loop=false;
+			}	
 		}
-		
-		
+	System.out.println(croatia);	
 	}
 	
 }
