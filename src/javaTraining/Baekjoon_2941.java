@@ -10,10 +10,14 @@ public class Baekjoon_2941 {
 		
 		int croatia=0;
 		int end; boolean loop;
-		for(int start=0; start<wd.length(); start=start+(end+1)) {
-			String tmp = wd.substring(start,start+2);
+		int maxIndex = wd.length()-1;
+		for(int start=0; start<wd.length(); start=start+end) {
+			end = 3;
+			if(start+end > maxIndex)
+				end = maxIndex - start +1;
+			String tmp = wd.substring(start,start+end);
 			
-			end = 3; loop=true;
+			loop=true; ++end;
 			while(loop) {
 				--end;
 				tmp = tmp.substring(0,end);
@@ -51,9 +55,11 @@ public class Baekjoon_2941 {
 					loop = false;
 					break;
 				}
-				if(end <= 0)
+				
+				if(end <= 1) {
 					croatia += 1; loop=false;
-			}	
+				}
+			}
 		}
 	System.out.println(croatia);	
 	}
