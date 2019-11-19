@@ -57,7 +57,8 @@ public class Baekjoon_2941 {
 				}
 				
 				if(end <= 1) {
-					croatia += 1; loop=false;
+					croatia += 1;
+					loop=false;
 				}
 			}
 		}
