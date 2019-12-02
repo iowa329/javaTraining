@@ -9,7 +9,7 @@ public class ReduceString {
 		sc.close();
 		
 		int cases = 1;
-		String result = null;
+		String result = "";
 		int shortest = s.length();
 		int cnt = 1;
 		while(cases <= s.length()) {
