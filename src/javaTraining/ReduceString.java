@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class ReduceString {
 	
-	public void main(String[] args) {
+	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String s = sc.next();
 		sc.close();
@@ -30,6 +30,7 @@ public class ReduceString {
 				shortest = result.length();
 			cases++;
 		}
+		System.out.println(result);
 		System.out.println(shortest);
 	}
 
