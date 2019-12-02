@@ -13,7 +13,7 @@ public class ReduceString {
 		int shortest = s.length();
 		int cnt = 1;
 		while(cases <= s.length()) {
-			for(int pos=0; pos+cases <= s.length(); pos+=cases) {
+			for(int pos=0; pos+(cases*2) <= s.length(); pos+=cases) {
 				String wd1 = s.substring(pos, pos+cases-1);
 				pos += cases;
 				String wd2 = s.substring(pos, pos+cases-1);
