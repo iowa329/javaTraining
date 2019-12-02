@@ -12,7 +12,7 @@ public class ReduceString {
 		String result = null;
 		int shortest = 0;
 		while(cases <= s.length()) {
-			for(int pos=0; pos+cases <= s.length(); pos++) {
+			for(int pos=0; pos+cases <= s.length(); pos+=cases) {
 				String wd1 = s.substring(pos, pos+cases-1);
 				pos += cases;
 				String wd2 = s.substring(pos, pos+cases-1);
@@ -22,10 +22,10 @@ public class ReduceString {
 					cnt++;
 					result = result + (cnt+wd1);
 				}
-				pos += cases;
 			}
 			if(result.length() < shortest)
 				shortest = result.length();
+			cases++;
 		}
 		
 	}
