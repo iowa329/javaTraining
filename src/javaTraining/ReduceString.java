@@ -13,19 +13,20 @@ public class ReduceString {
 		int shortest = s.length();
 		int cnt = 1;
 		while(cases <= s.length()) {
-			for(int pos=0; pos+(cases*2) <= s.length(); pos+=cases) {
+			for(int pos=0; pos+(cases*2) <= s.length()-1;) {
 				String wd1 = s.substring(pos, pos+cases-1);
 				pos += cases;
 				String wd2 = s.substring(pos, pos+cases-1);
 				
 				if(wd1 == wd2) {
-					cnt++;
-					result = result + (cnt+wd1);
+					result = result + s.replace(cnt+wd1, ++cnt+wd1);
 				} else {
-					result = result + wd1;
 					cnt = 1;
+					result = result + (cnt+wd2);
 				}
 			}
+			cnt = 1;
+			result = result.replace("1","");
 			if(result.length() < shortest)
 				shortest = result.length();
 			cases++;
