@@ -14,9 +14,9 @@ public class ReduceString {
 		int cnt = 1;
 		while(cases <= s.length()) {
 			for(int pos=0; pos+(cases*2) <= s.length()-1;) {
-				String wd1 = s.substring(pos, pos+cases-1);
+				String wd1 = s.substring(pos, pos+cases);
 				pos += cases;
-				String wd2 = s.substring(pos, pos+cases-1);
+				String wd2 = s.substring(pos, pos+cases);
 				
 				if(wd1 == wd2) {
 					result = result + s.replace(cnt+wd1, ++cnt+wd1);
@@ -29,6 +29,9 @@ public class ReduceString {
 			result = result.replace("1","");
 			if(result.length() < shortest)
 				shortest = result.length();
+
+			System.out.println(cases + ") " + result + " =>" + shortest);
+			
 			cases++;
 		}
 		System.out.println(result);
