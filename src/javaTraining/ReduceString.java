@@ -9,11 +9,11 @@ public class ReduceString {
 		sc.close();
 		
 		int cases = 1;
-		String result = "";
 		int shortest = s.length();
 		int cnt = 1;
+		String result = s.substring(0,1);
 		while(cases <= s.length()) {
-			for(int pos=0; pos+(cases*2) <= s.length()-1;) {
+			for(int pos=0; pos+(cases*2) <= s.length();) {
 				String wd1 = s.substring(pos, pos+cases);
 				pos += cases;
 				String wd2 = s.substring(pos, pos+cases);
@@ -30,7 +30,7 @@ public class ReduceString {
 			if(result.length() < shortest)
 				shortest = result.length();
 
-			System.out.println(cases + ") " + result + " =>" + shortest);
+			System.out.println(result + " (" + cases + ")=>" + shortest);
 			
 			cases++;
 		}
