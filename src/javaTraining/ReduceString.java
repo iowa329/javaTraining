@@ -14,7 +14,8 @@ public class ReduceString {
 		String result=""; //프린트문을 위한 임시 변수 선언(원래는 안에다가)
 		while(cases <= s.length()) {
 			/*String*/result = cnt + s.substring(0,cases);
-			for(int pos=0; pos+(cases*2) <= s.length();) {
+			int pos=0;
+			for(; pos+(cases*2) <= s.length();) {
 				String wd1 = s.substring(pos, pos+cases);
 				pos += cases;
 				String wd2 = s.substring(pos, pos+cases);
@@ -28,20 +29,25 @@ public class ReduceString {
 				}
 			}
 			cnt = 1;
+			
+			if(s.length() % cases != 0)
+				result = result + s.substring(pos+cases,s.length());
+			
 			result = result.replace("1","");
 			if(result.length() < shortest)
 				shortest = result.length();
 
 			System.out.println(result + " (" + cases + ")=>" + shortest);
 			
-			if(cases < s.length()) {
+			/*if(cases < s.length()) {
 				do {
 					cases++;
 					
 				} while(s.length() % cases != 0);
 			} else {
 				cases++;
-			}
+			}*/
+			cases++;
 		}
 		System.out.println(result);
 		System.out.println(shortest);
