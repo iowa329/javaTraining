@@ -34,9 +34,14 @@ public class ReduceString {
 
 			System.out.println(result + " (" + cases + ")=>" + shortest);
 			
-			do {
+			if(cases < s.length()) {
+				do {
+					cases++;
+					
+				} while(s.length() % cases != 0);
+			} else {
 				cases++;
-			} while(s.length() % cases != 0);
+			}
 		}
 		System.out.println(result);
 		System.out.println(shortest);
