@@ -2,6 +2,7 @@ package javaTraining;
 import java.util.Scanner;
 
 //구현문제_02_어피치_문자열_압축하기
+//201534007 김희재
 public class ReduceString {
 	
 	public static void main(String[] args) {
