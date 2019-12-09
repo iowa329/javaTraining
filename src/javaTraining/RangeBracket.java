@@ -3,38 +3,41 @@ import java.util.Scanner;
 
 public class RangeBracket {
 	
-	String isRightBracket(String p) {
-		String u = new String();
-		String v = new String();
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		String w = sc.next();
+		sc.close();
 		
-		int i=0, right=0, left=0;
-		do {
-			if(p.charAt(i) = '(') {
-				u.charAt(i) = p.charAt(i);
-				right++;
-				i++;
+		if(w.equals(""))
+			return "";
+		
+		String u,v;
+		int r=0, l=0;
+		for(int i=0; i<w.length(); i++) {
+			if(w.charAt(i) == '(') {
+				u += '(';
+				l++;
 			} else {
-				u.charAt(i) = p.charAt(i);
-				left++;
-				i++;
-		} while (right != left);
-		
-		for(;i<p.length(); i++) {
-			v.charAt(i) = p.charAt(i);
+				u += ')';
+				r++;
+			}
+			
+			if(l == r) {
+				v = w.substring(i+1, w.length());
+				i = w.length();
+			}
 		}
-		
-		return isRightBracket(u);
+
+		int open = 0;
+		for(int i=0; open < 0 || i < u.length(); i++) {
+			if(u.charAt(i) == '(') {
+				open++;
+			} else {
+				open--;
+			}
+		}
+		if(open < 0)
+			
 	}
 	
-	public static void main(String[] args) {
-		System.out.println("괄호 입력 : ");
-		Scanner sc = new Scanner(System.in);
-		String p = sc.next();
-		
-		String result = isRightBracket(p);
-		
-		System.out.println("올바른 괄호 문자열 정렬 결과 : " + result);
-	}
-
 }
-
