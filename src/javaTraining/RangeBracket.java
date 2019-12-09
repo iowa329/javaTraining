@@ -1,6 +1,8 @@
 package javaTraining;
 import java.util.Scanner;
 
+//구현문제_03_콘_괄호문자열_정렬하기
+//201534007 김희재
 public class RangeBracket {
 	
 	static String range(String w) {
