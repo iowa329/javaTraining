@@ -4,11 +4,10 @@ import java.util.Scanner;
 public class RangeBracket {
 	
 	static String range(String w) {
-		if(w.equals("")) return w;
+		if(w.equals("")) return "";
 		
 		String u="",v="";
-		int r=0, l=0;
-		for(int i=0; i<w.length(); i++) {
+		for(int i=0, l=0, r=0; i<w.length(); i++) {
 			if(w.charAt(i) == '(') {
 				u += '(';
 				l++;
@@ -18,13 +17,13 @@ public class RangeBracket {
 			}
 			
 			if(l == r) {
-				v = w.substring(i+1, w.length());
+				v = w.substring(i+1);
 				i = w.length();
 			}
 		}
 		
 		int open=0; int i=0;
-		while(open >= 0 || i < u.length()) {
+		while(open >= 0 && i < u.length()) {
 			if(u.charAt(i) == '(') {
 				open++;
 			} else {
@@ -33,9 +32,10 @@ public class RangeBracket {
 			i += 1;
 		}
 		if(open >= 0) {
-			return range(v);
+			v = range(v);
 		} else {
 			String s = "(";
+			v = range(v);
 			s += v;
 			s += ")";
 			u = u.substring(1,u.length()-1);
@@ -47,8 +47,10 @@ public class RangeBracket {
 				}
 			}
 			s += u;
-			return s;
+			v = s;
+			return v;
 		}
+		return u+v;
 	}
 	
 	
